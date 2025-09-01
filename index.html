@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNH Course Catalog Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <img src="imgs/logo.png" alt="University of New Hampshire Logo" class="logo">
+                <div class="header-text">
+                    <h1>Course Catalog Assistant</h1>
+                    <p>University of New Hampshire - Accounting and Finance</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Ask me about ACFI courses</h2>
+                <p>I can help you find information about Accounting and Finance graduate courses at UNH</p>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your ACFI Course Assistant. I can help you with information about:</p>
+                        <ul>
+                            <li>Course descriptions and requirements</li>
+                            <li>Prerequisites and credit hours</li>
+                            <li>Course topics and objectives</li>
+                            <li>Grading modes and repeat rules</li>
+                        </ul>
+                        <p>Try asking me something like "Tell me about ACFI 801" or "What courses require ACFI 801 as a prerequisite?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Questions -->
+            <div class="quick-questions">
+                <h3>Quick Questions:</h3>
+                <div class="question-buttons">
+                    <button class="question-btn" onclick="askQuestion('What is ACFI 801?')">What is ACFI 801?</button>
+                    <button class="question-btn" onclick="askQuestion('List all finance courses')">List all finance courses</button>
+                    <button class="question-btn" onclick="askQuestion('What are the prerequisite courses?')">What are prerequisites?</button>
+                    <button class="question-btn" onclick="askQuestion('Tell me about derivative securities')">Derivative Securities</button>
+                    <button class="question-btn" onclick="askQuestion('Compare ACFI 801 and ACFI 802')">Compare Courses</button>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <input type="text" id="userInput" placeholder="Ask about ACFI courses..." />
+                    <button id="sendButton" onclick="sendMessage()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data-processor.js"></script>
+    <script src="rag-chatbot.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
